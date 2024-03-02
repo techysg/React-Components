@@ -3,22 +3,51 @@
     "version": "1.0.2",
     "main": "dist/bundle.js",
     "scripts": {
-        "build": "webpack"
+        "webpack": "webpack",
+        "start": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
     },
     "files": [
         "dist"
     ],
-    "peerDependencies": {
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.14.1",
+        "@testing-library/react": "^11.2.7",
+        "@testing-library/user-event": "^12.8.3",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
-        "react-scripts": "4.0.3"
+        "react-scripts": "^5.0.1",
+        "web-vitals": "^1.1.2"
     },
     "devDependencies": {
         "@babel/core": "^7.0.0",
         "@babel/preset-env": "^7.0.0",
         "@babel/preset-react": "^7.0.0",
         "babel-loader": "^8.0.0",
+        "css-loader": "^6.10.0",
+        "sass-loader": "^14.1.1",
+        "style-loader": "^3.3.4",
         "webpack": "^5.0.0",
         "webpack-cli": "^5.1.4"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
     }
 }
